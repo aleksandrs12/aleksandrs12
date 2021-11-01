@@ -1,6 +1,6 @@
 import random
 
-a = []
+
 
 def randomm(num):
     x = []
@@ -9,6 +9,9 @@ def randomm(num):
     return x
 
 
+
+#   1
+a = []
 a = randomm(5)
 
 
@@ -26,7 +29,7 @@ else:
 
 
 
-
+#   2
 b = randomm(5)
 
 newb = []
@@ -49,7 +52,7 @@ for n1 in range(len(b)):
 
 
 
-
+#   3
 a = randomm(10)
 b = randomm(10)
 seen = {}
@@ -66,6 +69,8 @@ for n in b:
 
 
 
+    
+#    4
 a = ["cdrs", "rkt", "wx","aads", "ers","eeeer","sss", 'hiasd', 'uhloasd', 'enkl']
 patskani = {'a': True, 'e': True, 'i': True, 'u': True, 'o': True}
 num = 0
@@ -81,6 +86,10 @@ for n in a:
         print(n)
     num = 0
 print('')
+
+
+
+
 for n in a:
     if len(n) > 2 and n[-1] == 's':
         print(n)
