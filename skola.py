@@ -1,32 +1,89 @@
-#     1
-a = [0, 1, 2, 3, 4]
+import random
+
+a = []
+
+def randomm(num):
+    x = []
+    for n in range(num):
+        x.append(random.randint(0, 30))
+    return x
 
 
-#     2
-a[0] = a[-1]
+a = randomm(5)
 
 
-#     3
-a[1] = len(a)
+min = 31
+for n in a:
+    if n % 3 == 0 and n < min:
+        min = n
+
+if min == 31:
+    print('neviens skaitlis nedalas ar 3')
+else:
+    print(min)
 
 
-#     4
-b = a[0:2]
 
 
-#     5
-c = []
+
+
+b = randomm(5)
+
+newb = []
+
+min = 31
+i = 0
+
+for n1 in range(len(b)):
+    for n in range(len(b)):
+        if b[n] < min:
+            min = b[n]
+            i = n
+    newb.append(min)
+    min = 31
+    b.pop(i)
+
+
+
+
+
+
+
+
+a = randomm(10)
+b = randomm(10)
+seen = {}
+for n in a:
+    seen[n] = True
+
 for n in b:
-    c.append(n*5)
-
-    
-#     6
-for n in range(len(b)):
-    b[n]+=10
-    if b[n] > 20:
-        print(b[n])    
+    try:
+        seen[n]
+        print('True')
+        break
+    except:
+        pass
 
 
-#     7
-sumA = sum(a)
-print(sumA)
+
+a = ["cdrs", "rkt", "wx","aads", "ers","eeeer","sss", 'hiasd', 'uhloasd', 'enkl']
+patskani = {'a': True, 'e': True, 'i': True, 'u': True, 'o': True}
+num = 0
+
+for n in a:
+    for n1 in n:
+        try:
+            patskani[n1]
+            num += 1
+        except:
+            pass
+    if num > 2:
+        print(n)
+    num = 0
+print('')
+for n in a:
+    if len(n) > 2 and n[-1] == 's':
+        print(n)
+
+
+
